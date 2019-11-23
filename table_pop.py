@@ -38,11 +38,8 @@ def tablepop(docx_loc, docx_file,
     """Populates a table in word by modifying the file's XML
     
     Arguments:
-        folder {str} -- the folder to look at
-        file_name {str} -- the file name
-        ext {str} -- the file extension
+
     Returns:
-        str -- the final file path
 
     """
     
@@ -108,6 +105,8 @@ def tablepop(docx_loc, docx_file,
             print()
                 
         table_shell.save(file_loc(filled_shells_loc, filled_shells_file, 'docx'))
+        
+    return print("Finished populating: ", filled_shells_file)    
 
 
 if __name__ == '__main__':
